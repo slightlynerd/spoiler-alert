@@ -2,13 +2,20 @@
   "name": "Spoiler Blocker",
   "version": "0.2",
   "description": "A chrome extention that blocks spoilers of your favourite movies",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab", "storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/extensions/getstarted"],
+      "js": ["spoiler.js"],
+      "css": ["spoiler.css"]
+    }
+  ],
   "options_page": "options.html",
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html"
   },
   "manifest_version": 2
