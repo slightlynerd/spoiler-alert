@@ -1,6 +1,6 @@
 {
   "name": "Spoiler Blocker",
-  "version": "1.0",
+  "version": "0.2",
   "description": "A chrome extention that blocks spoilers of your favourite movies",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
